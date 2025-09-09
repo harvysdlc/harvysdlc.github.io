@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>harvysdlc</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="welcome">
+            <p>● welcome ●</p>
+        </div>
+        <div class="nav_bar">
+            <div class="nav_item">
+                <a href="profile.html">
+                <img src="assets/profile.png" alt="Profile" onclick="openzooming(this.src)">
+                <span class="nav_text">Profile</span>
+                </a>
+            </div>
+            <div class="nav_item">
+                <a href="mycv.pdf" download="mycv.pdf" target="_blank">
+                    <img src="assets/resume.png" alt="Resumé">
+                    <span class="nav_text">Resumé</span>
+                </a>
+            </div>
+            <div class="nav_item">
+                <a href="">
+                <img src="assets/portfolio.png" alt="Portfolio" onclick="openzooming(this.src)">
+                <span class="nav_text">Portfolio</span>
+                </a>
+            </div>
+            <div class="nav_item">
+                <a href="">
+                <img src="assets/message.png" alt="Message" onclick="openzooming(this.src)">
+                <span class="nav_text">Message</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <script>
+        function openzooming(src) {
+            console.log("Image source:", src);
+        }
+    </script>
+</body>
+</html>

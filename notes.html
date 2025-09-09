@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>harvysdlc</title>
+    <style>
+    @font-face {
+    font-family: "newake";
+        src: url("assets/newake.woff2") format("woff2"),
+        url("assets/newake.woff") format("woff"),
+        url("assets/newake.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+<body>
+	<header>
+        <br>
+        <br>
+		<div class="marquee">
+		<style>
+        .marquee-container {
+        width: 100%; /* Occupy full width */
+        display: flex; /* Use flexbox for centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically if needed */
+        }
+
+        #scroll_news {
+        font-family: "newake";
+        font-size: 90px;
+        color: #000000;
+        background-color: #ffffff;
+        height: 100px;
+        width: 900px;
+        direction: left;
+        /* Remove position: center; as it's not a valid CSS property */
+        }
+        </style>
+
+        <div class="marquee-container">
+        <marquee id='scroll_news' onMouseOver="document.getElementById('scroll_news').stop();" onMouseOut="document.getElementById('scroll_news').start();">
+            <a>welcome</a>
+        </marquee>
+        </div>		
+    </header>
+</body>
+</html>
