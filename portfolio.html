@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>harvysdlc</title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <header>
+         <div class="welcome">
+            <p>● portfolio ●</p>
+        </div>
+        <div class="back">
+            <a href="index.html">⬅ back</a>
+        </div>
+    </header>
+</head>
+<body>
+    <div class="scrollable-div">
+        <h1>UI/UX Designs for web applications</h1>
+        <p>●●●</p>
+        <hr style="border: 1px solid #f3a61e; margin: 20px auto; width: 500px;">
+        <h2>Filingua: An Interactive Web-based Application Tool Enhancing Philippine Language Proficiency</h2>
+        <div class="photo_gallery">
+			<img src="assets/filingua/0.gif" onclick="openzooming(this.src)">
+			<img src="assets/filingua/1.jpg" onclick="openzooming(this.src)">
+			<img src="assets/filingua/2.png" onclick="openzooming(this.src)">
+			<img src="assets/filingua/3.jpg" onclick="openzooming(this.src)">
+        </div>
+        <br>
+        <hr style="border: 1px solid #f3a61e; margin: 20px auto; width: 500px;">
+        <h2>Perston Academy: A School Grading System</h2>
+        <div class="photo_gallery2">
+            <img src="assets/perston/1.jpg" onclick="openzooming(this.src)">
+			<img src="assets/perston/2.jpg" onclick="openzooming(this.src)">
+			<img src="assets/perston/3.jpg" onclick="openzooming(this.src)">
+			<img src="assets/perston/4.jpg" onclick="openzooming(this.src)">
+        </div>
+    </div>
+
+    <div class="zoom" id="zoombox">
+        <img src="assets/filingua.jpg" id="zooming">
+        <span onclick="closezooming()">ⓧ</span>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        var zoombox = document.getElementById("zoombox");
+        var zooming = document.getElementById("zooming");
+
+        function openzooming(pic) {
+            zooming.src = pic;
+            zoombox.style.display = "flex";
+        }
+
+        function closezooming() {
+            zoombox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
