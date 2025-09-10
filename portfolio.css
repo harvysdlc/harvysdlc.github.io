@@ -72,13 +72,15 @@ html, body {
 
 /* Text Styles within Scrollable Div */
 .scrollable-div h1,
-.scrollable-div h2,
-.scrollable-div p {
+.scrollable-div h3,
+.scrollable-div p,
+.scrollable-div a {
     text-align: center;
     font-family: "newake";
     color: #f3a61e;
     font-weight: normal;
     margin-bottom: 15px; /* Add spacing below headings and paragraphs */
+    text-decoration: none
 }
 
 /* Photo Gallery Styles */
@@ -121,6 +123,47 @@ html, body {
     transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
 }
+
+.photo_gallery3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px; /* Add some space above the gallery */
+}
+
+.photo_gallery3 img {
+    width: 100%; /* Make images fill the grid item */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    outline: 2px solid #f3a61e; /* Initially transparent outline */
+
+}
+
+.photo_gallery3 img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
+}
+
+.photo_gallery4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px; /* Add some space above the gallery */
+}
+
+.photo_gallery4 img {
+    width: 100%; /* Make images fill the grid item */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    outline: 2px solid #f3a61e; /* Initially transparent outline */
+
+}
+
+.photo_gallery4 img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
+}
+
 
 /* Zoom Styles */
 .zoom {
