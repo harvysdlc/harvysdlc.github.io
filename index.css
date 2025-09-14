@@ -59,9 +59,9 @@ body {
 
 /* Button Styles (Most Specific and Corrected) */
 .page-container .welcome .buttons button {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
+    font-family: "newake", sans-serif;
+    font-weight: normal;
+    font-size: 1.1rem;
     color: #3d3b3c;
     border: none;
     padding: 10px 20px;
@@ -119,6 +119,8 @@ body {
     cursor: pointer;
     transition: height 0.3s ease; /* Smooth height transition */
     height: 50px; /* Initial collapsed height */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+
 }
 
 /* Card Title */
@@ -134,7 +136,8 @@ body {
         1px -1px 0 white,
         -1px 1px 0 white,
         1px 1px 0 white;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+
 }
 
 /* Card Content */
