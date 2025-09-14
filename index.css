@@ -1,10 +1,10 @@
 @font-face {
+    font-family: "newake";
     src: url("assets/newake.woff2") format("woff2"),
-    url("assets/newake.woff") format("woff"),
-    url("assets/newake.ttf") format("truetype");
+         url("assets/newake.woff") format("woff"),
+         url("assets/newake.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-    font-family: "newake";
 }
 
 /* Resetting default styles */
