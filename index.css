@@ -1,57 +1,68 @@
+/* Resetting default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Important: Include padding and border in element's total width and height */
+}
+
 html, body {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    background-image:  url(assets/bg.png);
-	height: 100vh;
-	background-size: 100% 110%;
-	background-position: center;
-	background-repeat: no-repeat;
+    background-image: url(assets/bg.png);
+    background-size: cover; /* Changed to cover for better background scaling */
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif; /* Add a default font-family */
 }
 
-/* Add a container to hold your main content */
+/* Overall page container */
 .page-container {
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 1200px; /* Maximum width of the content */
+    margin: 0 auto;      /* Centers the content horizontally */
+    padding: 20px;       /* Add some padding around the content */
 }
 
+/* Welcome section */
 .welcome {
     font-family: "newake";
     font-size: 40px;
     color: #3d3b3c;
-    display: flex; /* Enable Flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 10vh; /* Optional: Set a height for vertical centering to work */
+    display: flex;
+    justify-content: space-between; /* Distribute space between text and buttons */
+    align-items: center;
+    height: auto; /* Changed to auto for better responsiveness */
+    padding: 10px;
     background-color: white;
     z-index: 1;
 }
 
 .welcome p {
-    justify-content: left;
+    text-align: left; /* Align text to the left */
+    flex-grow: 1;      /* Allow text to take up available space */
 }
 
-.welcome .buttons{
+.welcome .buttons {
     text-align: right;
     display: flex;
-    gap: 20px;
-    padding: 0 20px;
+    gap: 10px; /* Reduced gap for smaller screens */
+    padding: 0 10px; /* Reduced padding for smaller screens */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line on smaller screens */
+    justify-content: flex-end; /* Align buttons to the right */
 }
 
-.welcome .buttons button{
+.welcome .buttons button {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.8rem; /* Reduced font size for smaller screens */
     color: #3d3b3c;
-    border-style: none;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    border: none;
+    padding: 8px 15px; /* Reduced padding for smaller screens */
     width: auto;
     cursor: pointer;
     border-radius: 30px;
     transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .welcome .buttons button:first-child {
@@ -60,99 +71,58 @@ html, body {
 }
 
 .welcome .buttons button:not(:first-child):hover {
-    color: #3d3b3c; /* Change font color on hover for buttons from 2nd child to last child */
+    color: #3d3b3c;
 }
 
 .welcome .buttons button:not(:first-child):not(:hover) {
-    background-color: transparent; /* Set background color of other buttons to transparent when not hovered */
+    background-color: transparent;
 }
 
 .welcome .buttons button:hover {
     background-color: white;
 }
 
-.nav_bar {
-    width: 70%;
-    max-width: 800px; /* Example max-width */
-    margin: 70px auto 50px;
-    display: grid; /* Changed to grid */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 5px;
-    justify-content: center; /* Keep this for overall horizontal centering of the grid */
-    align-items: center; /* Keep this for overall vertical centering of the grid */
-}
-
-.nav_bar img {
-	width: 70%;
-	cursor: pointer;
-}
-
-.nav_bar img:hover {
-	transform: scale(1.1) rotate(0deg);
-	border-radius: 25px;
-}
-
-.nav_item {
-    position: relative; /* Add this line */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.nav_text {
-    position: absolute;
-    top: -40px; /* Adjust this value */
-    left: 50%;      /* Corrected left value */
-    transform: translateX(-50%);
-    color: #f3a61e;
-    padding: 6px;
-    border-radius: 5px;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s linear;
-    white-space: nowrap;
-    font-size: 30px;
-    font-family: "newake";
-    z-index: 1;
-}
-
-.nav_item:hover .nav_text {
-    visibility: visible;
-    opacity: 1;
+/* Scrollable div */
+.scrollable-div {
+    max-width: 90%; /* Adjust as needed */
+    margin: 20px auto; /* Centers horizontally with top and bottom margin */
+    height: auto; /* Adjusted to auto for content-based height */
+    max-height: 80vh; /* Maximum height, adjust as needed */
+    overflow-y: auto;
+    padding: 10px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
 .scrollable-div::-webkit-scrollbar {
-    display: none;
-    scrollbar-width: none; /* Hide scrollbar */
-    -ms-overflow-style: none; /* Hide scrollbar */
+    display: none; /* Chrome, Safari and Opera */
 }
 
-.scrollable-div {
-    width: 80%; /* Or a max-width in pixels, e.g., 900px */
-    max-width: 900px;
-    margin: 5vh auto;
-    height: 65vh;
-    overflow-y: scroll; /* Add vertical scrollbar */
-    padding: 10px; /* Optional: Add some padding */
-}
-
-.scrollable-div p, h1, h2{
-    text-align: center; /* Corrected: Use text-align to center text */
+.scrollable-div p,
+.scrollable-div h1,
+.scrollable-div h2 {
+    text-align: center;
     font-family: "newake";
     color: #f3a61e;
     font-weight: normal;
 }
 
-.scrollable-div img{
-    max-width: 50%; /* Make the image responsive */
-    max-height: 50%; /* Make the image responsive */
-    display: block; /* Remove extra space below image */
-    margin: auto;
+.scrollable-div img {
+    max-width: 80%; /* Make the image responsive */
+    max-height: 80%; /* Make the image responsive */
+    display: block;
+    margin: 10px auto; /* Center the image */
     border-radius: 25px;
 }
 
+/* Horizontal Rule */
+hr {
+    border: 1px solid #f3a61e;
+    margin: 20px auto;
+    width: 80%; /* Adjusted width */
+}
+
+/* Back link */
 .back-link {
     font-size: 16px;
     color: #f3a61e;
@@ -162,4 +132,35 @@ html, body {
     text-align: center;
     margin-bottom: 5px;
     font-family: "newake";
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .welcome {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: center;    /* Center items horizontally */
+        text-align: center;
+    }
+
+    .welcome p {
+        text-align: center; /* Center the text */
+        margin-bottom: 10px; /* Add some space below the text */
+    }
+
+    .welcome .buttons {
+        justify-content: center; /* Center the buttons */
+    }
+
+    .welcome .buttons button {
+        font-size: 0.7rem; /* Further reduce font size on smaller screens */
+        padding: 5px 10px;
+    }
+
+    .scrollable-div {
+        max-width: 95%; /* Take up more width on smaller screens */
+    }
+
+    hr {
+        width: 90%; /* Wider hr on smaller screens */
+    }
 }

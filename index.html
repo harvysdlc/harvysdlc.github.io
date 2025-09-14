@@ -8,69 +8,71 @@
     <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
 <body>
-    <header>
-        <div class="welcome">
-            <p>● harvysdlc ●</p>
-            <div class="buttons">
-                <button onclick="window.location.href='index.html'">Profile</button>
-                <button onclick="window.location.href='portfolio.html'">Portfolio</button>
-                <button onclick="window.location.href=''">Message</button>
-                <button onclick="window.location.href=''">Download Resume</button>
+    <div class="page-container">
+        <header>
+            <div class="welcome">
+                <p>● harvysdlc ●</p>
+                <div class="buttons">
+                    <button onclick="window.location.href='index.html'">Profile</button>
+                    <button onclick="window.location.href='portfolio.html'">Portfolio</button>
+                    <button onclick="window.location.href=''">Message</button>
+                    <button onclick="window.location.href=''">Download Resume</button>
+                </div>
             </div>
+        </header>
+        <script>
+            function openzooming(src) {
+                console.log("Image source:", src);
+            }
+        </script>
+        <div class="scrollable-div">
+            <h1>Personal Information</h1>
+            <br>
+            <img src="assets/mypic.png" alt="Profile" onclick="openzooming(this.src)">
+            <p><br>Harvy Soriano Dela Cruz</p>
+            <p>December 22, 2002</p>
+            <p>Brgy. San Agustin, Trece Martires City, Cavite, Philippines</p>
+            <hr>
+            <h1>Education</h1>
+            <h2><br>Trece Martires City Daycare Center</h2>
+            <p>● Class Valedictorian</p>
+            <h2><br>Trece Martires City Elementary School</h2>
+            <p>● Consistent Honor Student</p>
+            <p>● Graduated With Honors - 2nd</p>
+            <h2><br>Trece Martires City National High School</h2>
+            <p>● Completed Junior High - With Honors</p>
+            <p>● Enrolled under General Curriculum - Model Section</p>
+            <p>● Campus Journalist - TV Broadcasting</p>
+            <p>● Campus Journalist - Layout Artist</p>
+            <p>● Conduct Awardee</p>
+            <p>● Visual Graphic Design NCIII Passer</p>
+            <h2><br>Trece Martires City Senior High School</h2>
+            <p>● Graduated With High Honors</p>
+            <p>● Enrolled under STEM Strand</p>
+            <p>● Member of Multimedia Arts Club</p>
+            <p>● President - STEM Club 2020-2021</p>
+            <p>● Vice President - STEM Club 2019-2020</p>
+            <p>● Conduct Awardee</p>
+            <h2><br>Cavite State University - Main Campus</h2>
+            <p>● Enrolled under BS Computer Science Program</p>
+            <p>● Outstanding CS Student 2021-2024</p>
+            <p>● Vice President - Computer Science Student Organization</p>
+            <p>● Public Relations Officer - Junior Philippine Computer Society</p>
+            <hr>
+            <h1>Internship</h1>
+            <p>● City of General Trias Doctors Medical Center Inc.</p>
+            <p>● Medical Records Intern</p>
+            <p>● July - August 2024, 240hrs</p>
+            <a href="assets/intern.png" target="_blank">
+                <img src="assets/intern.png" alt="internship">
+            </a>
+            <hr>
+            <h1>Certification</h1>
+            <p>● Visual Graphic Design NCIII</p>
+            <a href="assets/nc3.png" target="_blank">
+                <img src="assets/nc3.png" alt="nc3">
+            </a>
         </div>
-    </header>
-    <script>
-        function openzooming(src) {
-            console.log("Image source:", src);
-        }
-    </script>
-    <div class="scrollable-div">
-        <h1>Personal Information</h1>
-        <br>
-        <img src="assets/mypic.png" alt="Profile" onclick="openzooming(this.src)">
-        <p><br>Harvy Soriano Dela Cruz</p>
-        <p>December 22, 2002</p>
-        <p>Brgy. San Agustin, Trece Martires City, Cavite, Philippines</p>
-        <hr style="border: 1px solid #f3a61e; margin: 20px auto; width: 500px;">
-        <h1>Education</h1>
-        <h2><br>Trece Martires City Daycare Center</h2>
-        <p>● Class Valedictorian</p>
-        <h2><br>Trece Martires City Elementary School</h2>
-        <p>● Consistent Honor Student</p>
-        <p>● Graduated With Honors - 2nd</p>
-        <h2><br>Trece Martires City National High School</h2>
-        <p>● Completed Junior High - With Honors</p>
-        <p>● Enrolled under General Curriculum - Model Section</p>
-        <p>● Campus Journalist - TV Broadcasting</p>
-        <p>● Campus Journalist - Layout Artist</p>
-        <p>● Conduct Awardee</p>
-        <p>● Visual Graphic Design NCIII Passer</p>
-        <h2><br>Trece Martires City Senior High School</h2>
-        <p>● Graduated With High Honors</p>
-        <p>● Enrolled under STEM Strand</p>
-        <p>● Member of Multimedia Arts Club</p>
-        <p>● President - STEM Club 2020-2021</p>
-        <p>● Vice President - STEM Club 2019-2020</p>
-        <p>● Conduct Awardee</p>
-        <h2><br>Cavite State University - Main Campus</h2>
-        <p>● Enrolled under BS Computer Science Program</p>
-        <p>● Outstanding CS Student 2021-2024</p>
-        <p>● Vice President - Computer Science Student Organization</p>
-        <p>● Public Relations Officer - Junior Philippine Computer Society</p>
-        <hr style="border: 1px solid #f3a61e; margin: 20px auto; width: 500px;">
-        <h1>Internship</h1>
-        <p>● City of General Trias Doctors Medical Center Inc.</p>
-        <p>● Medical Records Intern</p>
-        <p>● July - August 2024, 240hrs</p>
-        <a href="assets/intern.png" target="_blank">
-        <img src="assets/intern.png" alt="internship">
-        </a>
-        <hr style="border: 1px solid #f3a61e; margin: 20px auto; width: 500px;">
-        <h1>Certification</h1>
-        <p>● Visual Graphic Design NCIII</p>
-		<a href="assets/nc3.png" target="_blank">
-        <img src="assets/nc3.png" alt="nc3">
-        </a>
     </div>
 </body>
 </html>
