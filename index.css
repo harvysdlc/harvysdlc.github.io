@@ -2,165 +2,192 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; /* Important: Include padding and border in element's total width and height */
+    box-sizing: border-box;
 }
 
 html, body {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
     background-image: url(assets/bg.png);
-    background-size: cover; /* Changed to cover for better background scaling */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: sans-serif; /* Add a default font-family */
+    font-family: sans-serif;
 }
 
 /* Overall page container */
 .page-container {
-    max-width: 1200px; /* Maximum width of the content */
-    margin: 0 auto;      /* Centers the content horizontally */
-    padding: 20px;       /* Add some padding around the content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Welcome section */
-.welcome {
+.page-container .welcome {
     font-family: "newake";
     font-size: 40px;
     color: #3d3b3c;
     display: flex;
-    justify-content: space-between; /* Distribute space between text and buttons */
+    justify-content: space-between; /* Keep space-between for alignment */
     align-items: center;
-    height: auto; /* Changed to auto for better responsiveness */
+    height: auto;
     padding: 10px;
-    background-color: white;
     z-index: 1;
 }
 
-.welcome p {
-    text-align: left; /* Align text to the left */
-    flex-grow: 1;      /* Allow text to take up available space */
+.page-container .welcome p {
+    text-align: left;
+    flex-grow: 1;
 }
 
-.welcome .buttons {
+.page-container .welcome .buttons {
     text-align: right;
     display: flex;
-    gap: 10px; /* Reduced gap for smaller screens */
-    padding: 0 10px; /* Reduced padding for smaller screens */
-    flex-wrap: wrap; /* Allow buttons to wrap to the next line on smaller screens */
-    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-.welcome .buttons button {
+/* Button Styles (Most Specific and Corrected) */
+.page-container .welcome .buttons button {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 0.8rem; /* Reduced font size for smaller screens */
+    font-size: 1rem;
     color: #3d3b3c;
     border: none;
-    padding: 8px 15px; /* Reduced padding for smaller screens */
+    padding: 10px 20px;
     width: auto;
     cursor: pointer;
     border-radius: 30px;
     transition: background-color 0.3s, color 0.3s;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
+    background-color: transparent; /* Add this line */
 }
 
-.welcome .buttons button:first-child {
+.page-container .welcome .buttons button:first-child {
     background-color: #f3a61e;
-    color: #3d3b3c;
+    color: white;
 }
 
-.welcome .buttons button:not(:first-child):hover {
-    color: #3d3b3c;
+/* Hover style for all buttons */
+.page-container .welcome .buttons button:hover {
+    background-color: #f3a61e;
+    color: white; /* Ensure text color changes on hover as well */
 }
 
-.welcome .buttons button:not(:first-child):not(:hover) {
-    background-color: transparent;
+.page-container .welcome .buttons button:not(:first-child):hover {
+    color: white; /* Redundant, but keeps it explicit */
+    background-color: #f3a61e;  /* Explicitly set background on hover */
 }
 
-.welcome .buttons button:hover {
-    background-color: white;
+.page-container .welcome .buttons button:not(:first-child):not(:hover) {
+    background-color: transparent; /* Ensure transparency when not hovered */
 }
 
 /* Scrollable div */
 .scrollable-div {
-    max-width: 90%; /* Adjust as needed */
-    margin: 20px auto; /* Centers horizontally with top and bottom margin */
-    height: auto; /* Adjusted to auto for content-based height */
-    max-height: 80vh; /* Maximum height, adjust as needed */
+    max-width: 90%;
+    margin: 40px auto;
+    height: auto;
+    max-height: 75vh;
     overflow-y: auto;
     padding: 10px;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .scrollable-div::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+    display: none;
 }
 
-.scrollable-div p,
-.scrollable-div h1,
-.scrollable-div h2 {
+/* Card Styles */
+.card {
+    width: 100%; /* Make cards fill the width of the scrollable div */
+    margin: 10px 0; /* Reduced vertical margin */
+    border: 3px solid #3d3b3c;
+    border-radius: 25px;
+    overflow: hidden; /* Hide content that overflows */
+    cursor: pointer;
+    transition: height 0.3s ease; /* Smooth height transition */
+    height: 50px; /* Initial collapsed height */
+}
+
+/* Card Title */
+.card-title {
+    padding: 10px;
     text-align: center;
+    font-family: "newake"; /* Use your font */
+    color: #f3a61e; /* Use your color */
+    font-size: 30px;
+    font-weight: normal;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    background-color: white;
+}
+
+/* Card Content */
+.card-content {
+    padding: 20px;
+    display: none; /* Initially hidden */
+}
+
+.card-content p,
+.card-content h2 {
+    text-align: center; /* Adjust text alignment within the content */
     font-family: "newake";
-    color: #f3a61e;
+    color: #3d3b3c;
     font-weight: normal;
 }
 
-.scrollable-div img {
-    max-width: 80%; /* Make the image responsive */
-    max-height: 80%; /* Make the image responsive */
+.card-content img {
+    max-width: 35%; /* Adjust image size within the content */
+    max-height: 35%;
     display: block;
-    margin: 10px auto; /* Center the image */
+    margin: 10px auto;
     border-radius: 25px;
 }
 
-/* Horizontal Rule */
-hr {
-    border: 1px solid #f3a61e;
-    margin: 20px auto;
-    width: 80%; /* Adjusted width */
+/* Expanded State */
+.card.expanded {
+    height: auto; /* Expand to full content height */
 }
 
-/* Back link */
-.back-link {
-    font-size: 16px;
-    color: #f3a61e;
-    text-decoration: none;
-    cursor: pointer;
-    display: block;
-    text-align: center;
-    margin-bottom: 5px;
-    font-family: "newake";
+.card.expanded .card-content {
+    display: block; /* Show content when expanded */
 }
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
-    .welcome {
-        flex-direction: column; /* Stack the elements vertically */
-        align-items: center;    /* Center items horizontally */
+    .page-container .welcome {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .welcome p {
-        text-align: center; /* Center the text */
-        margin-bottom: 10px; /* Add some space below the text */
+    .page-container .welcome p {
+        text-align: center;
+        margin-bottom: 10px;
     }
 
-    .welcome .buttons {
-        justify-content: center; /* Center the buttons */
+    .page-container .welcome .buttons {
+        justify-content: center;
     }
 
-    .welcome .buttons button {
-        font-size: 0.7rem; /* Further reduce font size on smaller screens */
-        padding: 5px 10px;
+    /* Reset button font size for smaller screens if needed */
+    .page-container .welcome .buttons button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
     }
 
     .scrollable-div {
-        max-width: 95%; /* Take up more width on smaller screens */
+        max-width: 95%;
     }
 
     hr {
-        width: 90%; /* Wider hr on smaller screens */
+        width: 90%;
     }
 }
