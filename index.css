@@ -25,12 +25,57 @@ html, body {
 
 .welcome {
     font-family: "newake";
-    font-size: 90px;
-    color: #f3a61e;
+    font-size: 40px;
+    color: #3d3b3c;
     display: flex; /* Enable Flexbox */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: 30vh; /* Optional: Set a height for vertical centering to work */
+    height: 10vh; /* Optional: Set a height for vertical centering to work */
+    background-color: white;
+    z-index: 1;
+}
+
+.welcome p {
+    justify-content: left;
+}
+
+.welcome .buttons{
+    text-align: right;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.welcome .buttons button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #3d3b3c; 
+    border-style: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.welcome .buttons button:first-child {
+    background-color: #f3a61e; 
+    color: #3d3b3c;
+}
+
+.welcome .buttons button:not(:first-child):hover {
+    color: #3d3b3c; /* Change font color on hover for buttons from 2nd child to last child */
+}
+
+.welcome .buttons button:not(:first-child):not(:hover) {
+    background-color: transparent; /* Set background color of other buttons to transparent when not hovered */
+}
+
+.welcome .buttons button:hover {
+    background-color: white;
 }
 
 .nav_bar {
@@ -121,4 +166,33 @@ html, body {
     text-align: center;
     margin-bottom: 5px;
     font-family: "newake";
+}
+
+.scrollable-div::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar */
+}
+
+.scrollable-div {
+    width: auto;
+    margin-top: 5vh;
+    height: 65vh;
+    overflow-y: scroll; /* Add vertical scrollbar */
+    padding: 10px; /* Optional: Add some padding */
+}
+
+.scrollable-div p, h1, h2{
+    text-align: center; /* Corrected: Use text-align to center text */
+    font-family: "newake";
+    color: #f3a61e;
+    font-weight: normal;
+}
+
+.scrollable-div img{
+    max-width: 50%; /* Make the image responsive */
+    max-height: 50%; /* Make the image responsive */
+    display: block; /* Remove extra space below image */
+    margin: auto; 
+    border-radius: 25px; 
 }
