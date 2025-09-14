@@ -22,7 +22,7 @@
         </header>
         <div class="scrollable-div">
 
-            <div class="card" onclick="toggleCard(this)">
+            <div class="card expanded" onclick="toggleCard(this)">  <!-- ADDED expanded CLASS -->
                 <div class="card-title">Personal Information</div>
                 <div class="card-content">
                     <img src="assets/mypic.png" alt="Profile" onclick="openzooming(this.src)">
@@ -96,6 +96,13 @@
         function toggleCard(card) {
             card.classList.toggle('expanded');
         }
+        // Open the first card by default
+        document.addEventListener('DOMContentLoaded', function() {
+            var firstCard = document.querySelector('.card');
+            if (firstCard) {
+                firstCard.classList.add('expanded');
+            }
+        });
     </script>
 </body>
 </html>
