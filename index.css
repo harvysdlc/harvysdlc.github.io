@@ -105,6 +105,10 @@ body {
     -ms-overflow-style: none;
 }
 
+.scrollable-div p{
+    text-align: center;
+}
+
 .scrollable-div::-webkit-scrollbar {
     display: none;
 }
