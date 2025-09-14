@@ -11,6 +11,15 @@ html {
     min-height: 100%; /* Ensure html takes at least the full viewport height */
 }
 
+@font-face {
+    src: url("assets/newake.woff2") format("woff2"),
+    url("assets/newake.woff") format("woff"),
+    url("assets/newake.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-family: "newake";
+}
+
 body {
     width: 100%;
     min-height: 100vh; /* Ensure body takes at least the full viewport height */
