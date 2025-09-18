@@ -116,7 +116,7 @@ body {
 
 /* Scrollable Div Styles */
 .scrollable-div {
-    width: 90%; /* Adjust width as needed */
+    width: 70%; /* Adjust width as needed */
     margin: 20px auto; /* Center the div and add some top margin */
     height: 80vh;
     overflow-y: auto; /* Enable vertical scrolling */
@@ -128,23 +128,7 @@ body {
 
 /* Hide the scrollbar in WebKit browsers (Chrome, Safari) */
 .scrollable-div::-webkit-scrollbar {
-    width: 8px;  /* Adjust width as needed */
-}
-
-/* Track (the area behind the thumb) in WebKit browsers */
-.scrollable-div::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Light grey background */
-}
-
-/* Handle (the draggable part) in WebKit browsers */
-.scrollable-div::-webkit-scrollbar-thumb {
-    background: #f3a61e; /* Orange scrollbar color */
-    border-radius: 4px; /* Rounded corners */
-}
-
-/* Handle on hover in WebKit browsers */
-.scrollable-div::-webkit-scrollbar-thumb:hover {
-    background: #d98e0c; /* Darker orange on hover */
+    display: none;
 }
 
 /* Text Styles within Scrollable Div */
@@ -163,7 +147,7 @@ body {
 /* Photo Gallery Styles */
 .photo_gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
     margin-top: 20px; /* Add some space above the gallery */
 }
