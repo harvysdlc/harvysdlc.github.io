@@ -117,13 +117,14 @@ body {
 /* Scrollable Div Styles */
 .scrollable-div {
     max-width: 90%; /* Adjust width as needed */
-    margin: 20px auto; /* Center the div and add some top margin */
-    height: 80vh;
+    margin: 50px auto; /* Center the div and add some top margin */
+    height: 73vh;
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 20px;
-    border-radius: 10px; /* Optional: Round the corners */
+    border-radius: 25px; /* Optional: Round the corners */
     -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
     scrollbar-width: none; /* Hide scrollbar in Firefox */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
 }
 
 /* Hide the scrollbar in WebKit browsers (Chrome, Safari) */
@@ -156,12 +157,13 @@ body {
     width: 100%; /* Make images fill the grid item */
     cursor: pointer;
     transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-    outline: 2px solid #f3a61e; /* Initially transparent outline */
+    outline: 2px solid #3d3b3c; /* Initially transparent outline */
+    border-radius: 10px;
 
 }
 
 .photo_gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
 }
 
@@ -176,12 +178,13 @@ body {
     width: 100%; /* Make images fill the grid item */
     cursor: pointer;
     transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-    outline: 2px solid #f3a61e; /* Initially transparent outline */
+    outline: 2px solid #3d3b3c; /* Initially transparent outline */
+    border-radius: 10px;
 
 }
 
 .photo_gallery2 img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
 }
 
@@ -196,12 +199,12 @@ body {
     width: 100%; /* Make images fill the grid item */
     cursor: pointer;
     transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-    outline: 2px solid #f3a61e; /* Initially transparent outline */
-
+    outline: 2px solid #3d3b3c; /* Initially transparent outline */
+    border-radius: 10px;
 }
 
 .photo_gallery3 img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
 }
 
@@ -216,12 +219,12 @@ body {
     width: 100%; /* Make images fill the grid item */
     cursor: pointer;
     transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-    outline: 2px solid #f3a61e; /* Initially transparent outline */
-
+    outline: 2px solid #3d3b3c; /* Initially transparent outline */
+    border-radius: 10px;
 }
 
 .photo_gallery4 img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
 }
 
