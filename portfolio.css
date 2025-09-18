@@ -43,37 +43,108 @@ body {
     height: 160px;
 }
 
-.back {
-    font-family: "newake";
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-    margin-top: -20px;
+/* Overall page container */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.back a {
-    text-decoration: none;
-    color: inherit;
+/* Welcome section */
+.page-container .welcome {
+    font-family: "newake";
+    font-size: 40px;
+    color: #f3a61e;
+    display: flex;
+    justify-content: space-between; /* Keep space-between for alignment */
+    align-items: center;
+    height: auto;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 25px;
+}
+
+.page-container .welcome p {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.page-container .welcome .buttons {
+    text-align: right;
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* Button Styles (Most Specific and Corrected) */
+.page-container .welcome .buttons button {
+    font-family: "newake", sans-serif;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: #3d3b3c;
+    border: none;
+    padding: 10px 20px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+    background-color: transparent; /* Add this line */
+}
+
+.page-container .welcome .buttons button:nth-child(2) {
+    background-color: #f3a61e;
+    color: white;
+}
+
+/* Hover style for all buttons */
+.page-container .welcome .buttons button:hover {
+    background-color: #f3a61e;
+    color: white; /* Ensure text color changes on hover as well */
+}
+
+.page-container .welcome .buttons button:not(:nth-child(2)):hover {
+    color: white; /* Redundant, but keeps it explicit */
+    background-color: #f3a61e;  /* Explicitly set background on hover */
+}
+
+.page-container .welcome .buttons button:not(:nth-child(2)):not(:hover) {
+    background-color: transparent; /* Ensure transparency when not hovered */
 }
 
 /* Scrollable Div Styles */
 .scrollable-div {
     width: 90%; /* Adjust width as needed */
     margin: 20px auto; /* Center the div and add some top margin */
-    height: 65vh;
+    height: 80vh;
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 20px;
     border-radius: 10px; /* Optional: Round the corners */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
 }
 
-/* Hide Scrollbar */
+/* Hide the scrollbar in WebKit browsers (Chrome, Safari) */
 .scrollable-div::-webkit-scrollbar {
-    display: none;
+    width: 8px;  /* Adjust width as needed */
 }
 
-.scrollable-div {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+/* Track (the area behind the thumb) in WebKit browsers */
+.scrollable-div::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey background */
+}
+
+/* Handle (the draggable part) in WebKit browsers */
+.scrollable-div::-webkit-scrollbar-thumb {
+    background: #f3a61e; /* Orange scrollbar color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Handle on hover in WebKit browsers */
+.scrollable-div::-webkit-scrollbar-thumb:hover {
+    background: #d98e0c; /* Darker orange on hover */
 }
 
 /* Text Styles within Scrollable Div */
@@ -92,7 +163,7 @@ body {
 /* Photo Gallery Styles */
 .photo_gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 20px;
     margin-top: 20px; /* Add some space above the gallery */
 }
@@ -199,4 +270,36 @@ body {
     font-size: 30px;
     color: #f3a61e;
     cursor: pointer;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .page-container .welcome {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .page-container .welcome p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .page-container .welcome .buttons {
+        justify-content: center;
+    }
+
+    /* Reset button font size for smaller screens if needed */
+    .page-container .welcome .buttons button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    .scrollable-div {
+        max-width: 95%;
+    }
+
+    hr {
+        width: 90%;
+    }
 }
