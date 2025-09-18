@@ -116,7 +116,7 @@ body {
 
 /* Scrollable Div Styles */
 .scrollable-div {
-    width: 70%; /* Adjust width as needed */
+    max-width: 90%; /* Adjust width as needed */
     margin: 20px auto; /* Center the div and add some top margin */
     height: 80vh;
     overflow-y: auto; /* Enable vertical scrolling */
