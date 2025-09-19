@@ -147,7 +147,7 @@ body {
 
 .contact-container{
     height: 60vh;
-    max-width: 90%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -161,7 +161,7 @@ body {
 }
 
 .contact-inputs{
-    width: 400px;
+    width: 350px;
     height: 50px;
     border: none;
     outline: none;
@@ -171,6 +171,7 @@ body {
     border-radius: 25px;
     background-color: #3d3b3c;
     font-family: "newake";
+    align-items: center;
 }
 
 .contact-left textarea{
