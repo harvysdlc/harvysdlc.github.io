@@ -160,7 +160,7 @@ body {
 }
 
 .contact-inputs{
-    width: 400px;
+    max-width: 90%;
     height: 50px;
     border: none;
     outline: none;
