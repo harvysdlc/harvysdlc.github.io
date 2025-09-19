@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>harvysdlc // under development</title>
+    <link rel="stylesheet" type="text/css" href="message.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="welcome">
+                <p>● harvysdlc ●</p>
+                <div class="buttons">
+                    <button onclick="window.location.href='index.html'">Profile</button>
+                    <button onclick="window.location.href='portfolio.html'">Portfolio</button>
+                    <button onclick="window.location.href=''">Message</button>
+                    <button id="downloadButton">Download Resume</button>
+                    <script>
+                    document.getElementById('downloadButton').addEventListener('click', function() {
+                    var pdfUrl = 'mycv.pdf';
+                    var link = document.createElement('a');
+                    link.href = pdfUrl;
+                    link.download = 'Resume_HarvyDelaCruz.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    });
+                    </script>
+                </div>
+            </div>
+        </header>
+        <div class="scrollable-div">
+            <h1>Contact Me</h1>
+            <hr>
+            <div class="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                    <input type="hidden" name="access_key" value="45d353ca-a000-4df7-808d-3e6f63c77235">
+                    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                    <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                    <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

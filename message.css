@@ -1,0 +1,237 @@
+/* Resetting default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    min-height: 100%; /* Ensure html takes at least the full viewport height */
+}
+
+body {
+    width: 100%;
+    min-height: 100vh; /* Ensure body takes at least the full viewport height */
+    background-image: url(assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Prevent background from scrolling */
+    background-color: transparent; /* Add this line */
+}
+
+/* Font Face Declaration */
+@font-face {
+    font-family: "newake";
+    src: url("assets/newake.woff2") format("woff2"),
+         url("assets/newake.woff") format("woff"),
+         url("assets/newake.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header Styles */
+.welcome {
+    font-family: "newake";
+    font-size: 90px;
+    color: #f3a61e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+}
+
+/* Overall page container */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Welcome section */
+.page-container .welcome {
+    font-family: "newake";
+    font-size: 40px;
+    color: #f3a61e;
+    display: flex;
+    justify-content: space-between; /* Keep space-between for alignment */
+    align-items: center;
+    height: auto;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 25px;
+}
+
+.page-container .welcome p {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.page-container .welcome .buttons {
+    text-align: right;
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* Button Styles (Most Specific and Corrected) */
+.page-container .welcome .buttons button {
+    font-family: "newake", sans-serif;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: #3d3b3c;
+    border: none;
+    padding: 10px 20px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+    background-color: transparent; /* Add this line */
+}
+
+.page-container .welcome .buttons button:nth-child(3) {
+    background-color: #f3a61e;
+    color: white;
+}
+
+/* Hover style for all buttons */
+.page-container .welcome .buttons button:hover {
+    background-color: #f3a61e;
+    color: white; /* Ensure text color changes on hover as well */
+}
+
+.page-container .welcome .buttons button:not(:nth-child(3)):hover {
+    color: white; /* Redundant, but keeps it explicit */
+    background-color: #f3a61e;  /* Explicitly set background on hover */
+}
+
+.page-container .welcome .buttons button:not(:nth-child(3)):not(:hover) {
+    background-color: transparent; /* Ensure transparency when not hovered */
+}
+
+/* Scrollable Div Styles */
+.scrollable-div {
+    max-width: 90%; /* Adjust width as needed */
+    margin: 50px auto; /* Center the div and add some top margin */
+    height: 73vh;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+    border-radius: 25px; /* Optional: Round the corners */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+}
+
+/* Hide the scrollbar in WebKit browsers (Chrome, Safari) */
+.scrollable-div::-webkit-scrollbar {
+    display: none;
+}
+
+/* Text Styles within Scrollable Div */
+.scrollable-div h1,
+.scrollable-div h3,
+.scrollable-div p,
+.scrollable-div a {
+    text-align: center;
+    font-family: "newake";
+    color: #f3a61e;
+    font-weight: normal;
+    margin-bottom: 15px; /* Add spacing below headings and paragraphs */
+    text-decoration: none
+}
+
+.contact-container{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #f3a61e;
+    border-radius: 25px;
+    background-color: #3d3b3c;
+    font-family: "newake";
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 20px;
+    border-radius: 10px;
+    font-family: "newake";
+}
+
+.contact-inputs:focus{
+    border: 2px solid #f3a61e;
+}
+
+.contact-inputs::placeholder{
+    color: white;
+}
+
+.contact-left button{
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding: 15px 30px;
+    font-size: 14px;
+    color: #f3a61e;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #3d3b3c;
+    cursor: pointer;
+    font-family: "newake";
+    margin: 0 auto;
+}
+
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .page-container .welcome {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .page-container .welcome p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .page-container .welcome .buttons {
+        justify-content: center;
+    }
+
+    /* Reset button font size for smaller screens if needed */
+    .page-container .welcome .buttons button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    .scrollable-div {
+        max-width: 95%;
+    }
+
+    hr {
+        width: 90%;
+    }
+}
