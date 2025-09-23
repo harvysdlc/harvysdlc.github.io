@@ -373,7 +373,7 @@ body {
     }
     /* Slider-specific adjustments for mobile */
     .slider {
-        width: 50%; /* Take up more screen width */
+        max-width: 95%; /* Take up more screen width */
         height: 40px; /* Adjust height as needed */
     }
 
