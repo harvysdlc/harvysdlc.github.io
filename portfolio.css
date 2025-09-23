@@ -259,6 +259,88 @@ body {
     cursor: pointer;
 }
 
+.slider{
+    width: 70%;
+    max-width: 100vw;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.slider .list img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Use 'cover' to fill the area */
+    object-position: center; /* Center the image within its container */
+}
+
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-family: "newake", sans-serif; /* Consistent font */
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: #3d3b3c;               /* Consistent color scheme */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: rgba(243, 166, 30, 0.5); /* Adjusted background color */
+}
+
+.slider .buttons button:hover {
+    background-color: #f3a61e; /* Consistent hover color */
+    color: white;
+}
+
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #f3a61e; /* Consistent color */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.slider .dots li.active{
+    width: 30px;
+}
+
+
+
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
     .page-container .welcome {
@@ -288,5 +370,9 @@ body {
 
     hr {
         width: 90%;
+    }
+
+    .slider{
+        height: 400px;
     }
 }
