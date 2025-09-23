@@ -371,43 +371,35 @@ body {
     hr {
         width: 90%;
     }
-
+    /* Slider-specific adjustments for mobile */
     .slider {
-    /* Adjust slider container */
-    margin-bottom: 20px; /* Add some spacing below each slider */
-  }
+        width: 95%; /* Take up more screen width */
+        height: 300px; /* Adjust height as needed */
+    }
 
-  .slider .list {
-    /* Allow only one item to be visible at a time */
-    /* If you want to display multiple images at once, remove the width property */
-    width: 100%;
-  }
+    .slider .buttons {
+        width: 100%; /* Buttons take full width */
+        left: 0;    /* Reset left position */
+        padding: 0 5px; /* Add some padding */
+        top: auto;   /* Reset top position */
+        bottom: 5px;  /* Position buttons at the bottom */
+    }
 
-  .slider .item {
-    /* Adjust image item */
-    width: 100%;
-  }
+    .slider .buttons button {
+        width: 40px;   /* Smaller buttons */
+        height: 40px;
+        font-size: 1rem; /* Adjust font size */
+    }
 
-  .slider .buttons {
-    /* Adjust button position */
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 5px;
-  }
+    .slider .dots {
+        bottom: 5px; /* Adjust dot position */
+    }
 
-  .slider .buttons button {
-    /* Adjust button style */
-    font-size: 14px;
-    padding: 3px 6px;
-  }
+    .slider .dots li {
+        margin: 5px;  /* Adjust dot spacing */
+    }
 
-  .slider .dots {
-    /* Adjust dots position */
-    bottom: -10px; /* Push dots further down */
-  }
-
+    .slider .dots li.active {
+        width: 20px;  /* Adjust active dot width */
+    }
 }
