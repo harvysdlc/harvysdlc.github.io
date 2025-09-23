@@ -374,7 +374,7 @@ body {
     /* Slider-specific adjustments for mobile */
     .slider {
         width: 95%; /* Take up more screen width */
-        height: 100px; /* Adjust height as needed */
+        height: 50px; /* Adjust height as needed */
     }
 
     .slider .buttons {
