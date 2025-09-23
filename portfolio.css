@@ -371,35 +371,61 @@ body {
     hr {
         width: 90%;
     }
-    /* Slider-specific adjustments for mobile */
+
+    /* Adjust the slider container */
     .slider {
-        width: 90%; /* Take up more screen width */
-        height: 40px; /* Adjust height as needed */
+        width: 95%; /* Take up almost the full screen width */
+        max-width: 600px; /* Optional: Set a maximum width */
+        height: auto; /* Let the height adjust to the image */
+        aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+        margin: 0 auto; /* Center the slider */
     }
 
+    .slider .list {
+        /* Ensure only one image is visible */
+        width: 100%; /* Take up the full width of the slider */
+        height: 100%;
+    }
+
+    .slider .item {
+        width: 100%; /* Each item should take the full width */
+        height: 100%;
+    }
+
+    .slider .item img {
+        width: 100%; /* Make the image fill the item */
+        height: 100%;
+        object-fit: cover; /* Cover the area, cropping if necessary */
+    }
+
+    /* Adjust the buttons */
     .slider .buttons {
-        width: 100%; /* Buttons take full width */
-        left: 0;    /* Reset left position */
-        padding: 0 5px; /* Add some padding */
-        top: auto;   /* Reset top position */
-        bottom: 5px;  /* Position buttons at the bottom */
+        /* Position buttons */
+        top: auto;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0 10px;
     }
 
     .slider .buttons button {
-        width: 40px;   /* Smaller buttons */
+        /* Style buttons */
+        width: 40px;
         height: 40px;
-        font-size: 1rem; /* Adjust font size */
+        font-size: 1rem;
     }
 
+    /* Adjust the dots */
     .slider .dots {
-        bottom: 5px; /* Adjust dot position */
+        bottom: 5px;
     }
 
     .slider .dots li {
-        margin: 5px;  /* Adjust dot spacing */
+        margin: 5px;
     }
 
     .slider .dots li.active {
-        width: 20px;  /* Adjust active dot width */
+        width: 20px;
     }
 }
