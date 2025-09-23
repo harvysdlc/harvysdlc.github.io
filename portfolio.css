@@ -372,7 +372,42 @@ body {
         width: 90%;
     }
 
-    .slider{
-        max-width: 95%;
-    }
+    .slider {
+    /* Adjust slider container */
+    margin-bottom: 20px; /* Add some spacing below each slider */
+  }
+
+  .slider .list {
+    /* Allow only one item to be visible at a time */
+    /* If you want to display multiple images at once, remove the width property */
+    width: 100%;
+  }
+
+  .slider .item {
+    /* Adjust image item */
+    width: 100%;
+  }
+
+  .slider .buttons {
+    /* Adjust button position */
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+  }
+
+  .slider .buttons button {
+    /* Adjust button style */
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+
+  .slider .dots {
+    /* Adjust dots position */
+    bottom: -10px; /* Push dots further down */
+  }
+
 }
